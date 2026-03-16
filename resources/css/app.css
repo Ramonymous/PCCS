@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+
+/**
+    The lines above are intact.
+    The lines below were added by maryUI installer.
+*/
+
+/** daisyUI */
+@plugin "daisyui" {
+    themes: winter --default, dim --prefersdark;
+}
+
+/* maryUI */
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+
+/* Theme toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/**
+* Paginator - Traditional style
+* Because Laravel defaults does not match well the design of daisyUI.
+*/
+
+.mary-table-pagination span[aria-current="page"] > span {
+    @apply bg-primary text-base-100
+}
+
+.mary-table-pagination button {
+    @apply cursor-pointer
+}
+
+/**
+* Custom App Layout Enhancements
+*/
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-base-300 rounded-full hover:bg-base-content/30 transition-colors;
+}
+
+/* Menu item hover effects */
+.mary-menu-item {
+    @apply transition-all duration-200;
+}
+
+.mary-menu-item:hover {
+    @apply scale-[1.02];
+}
+
+/* Active menu item styling */
+.mary-menu-item.mary-active {
+    @apply bg-gradient-to-r from-primary/20 to-primary/10 border-l-4 border-primary font-semibold;
+}
+
+/* Card hover effects */
+.card {
+    @apply transition-all duration-300;
+}
+
+.card:hover {
+    @apply shadow-lg scale-[1.01];
+}
+
+/* Button enhancements */
+.btn {
+    @apply transition-all duration-200;
+}
+
+.btn:hover {
+    @apply scale-105 shadow-md;
+}
+
+/* Table row hover */
+.mary-table tbody tr {
+    @apply transition-colors duration-150;
+}
+
+.mary-table tbody tr:hover {
+    @apply bg-base-200/50;
+}
+
+/* Input focus glow */
+.input:focus,
+.textarea:focus,
+.select:focus {
+    @apply ring-2 ring-primary/30 ring-offset-2 ring-offset-base-100;
+}
+
+/* Badge pulse animation */
+@keyframes pulse-soft {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.badge {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Drawer backdrop blur */
+.drawer-overlay {
+    @apply backdrop-blur-sm;
+}
+
+/* Loading animation */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spin-slow 1s linear infinite;
+}
+
+/* Hide default Livewire loading indicator */
+[wire\:loading] {
+    display: none !important;
+}
+
+/* Allow specific wire:loading with custom class to still show */
+[wire\:loading].show-inline {
+    display: block !important;
+}
+
+/* Toast enhancements */
+.mary-toast {
+    @apply backdrop-blur-md shadow-xl border border-base-300;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    @apply backdrop-blur-sm bg-base-content/30;
+}
+
+/* Stats card gradient */
+.stats {
+    @apply bg-gradient-to-br from-base-100 to-base-200;
+}
+
+/* Tooltip styling */
+.tooltip {
+    @apply backdrop-blur-md;
+}
