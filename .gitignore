@@ -1,0 +1,71 @@
+# Laravel
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/.env
+/.env.*
+Homestead.json
+Homestead.yaml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+/storage/logs/
+/storage/framework/cache/data/
+
+# Build
+/public/build/
+/public/hot
+
+# Composer
+/vendor/
+/composer.lock
+
+# Node
+/node_modules/
+
+# Misc
+*.sqlite
+*.sqlite3
+
+# Laravel Octane
+/octane.*
+
+# JetBrains
+/.idea
+
+# Jetpack
+*.log
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# NPM
+npm-debug.log
+
+# Yarn
+yarn-error.log
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environment
+.env
