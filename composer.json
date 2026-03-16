@@ -13,7 +13,6 @@
         "bacon/bacon-qr-code": "^3.0",
         "laravel-notification-channels/webpush": "^10.2",
         "laravel/framework": "^12.0",
-        "laravel/octane": "^2.13",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
         "livewire/volt": "^1.8",
@@ -24,14 +23,11 @@
         "robsontenorio/mary": "^2.4",
         "spatie/laravel-pdf": "^1.8",
         "spatie/laravel-permission": "^6.22",
-        "spiral/roadrunner-cli": "^2.7",
-        "spiral/roadrunner-http": "^3.6",
         "vildanbina/laravel-auto-translation": "^1.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.24",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
