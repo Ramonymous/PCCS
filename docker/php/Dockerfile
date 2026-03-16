@@ -7,7 +7,7 @@ RUN apk update && apk add \
     unzip \
     libpng-dev \
     libzip-dev \
-    libonig-dev \
+    oniguruma-dev \
     chromium \
     nodejs \
     npm
